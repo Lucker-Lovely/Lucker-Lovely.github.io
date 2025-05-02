@@ -2,7 +2,7 @@
 
 一个基于Web的实时绘画应用程序，支持自由绘制、调整画笔属性并保存作品为图片。
 
-![项目截图](https://Lucker-Lovely.github.io/example.jepg)
+![项目截图](https://Lucker-Lovely.github.io/example.jpeg)
 
 ## ✨ 功能特性
 
