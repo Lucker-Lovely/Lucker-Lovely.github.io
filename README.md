@@ -26,3 +26,6 @@
   - 响应式布局
   - 移动端兼容
   - 零依赖原生实现
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
