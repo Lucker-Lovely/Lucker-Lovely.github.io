@@ -61,17 +61,27 @@
         messageInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') sendMessage();
         });
-        //导出
-        function exportMessage() {
-    const savedMessage = localStorage.getItem('userMessage');
+  //导出
+function exportMessage() {
+    // 从 localStorage 中获取保存的留言数据（使用正确的键名 'comments'）
+    const savedMessages = JSON.parse(localStorage.getItem('comments')) || [];
     
-    if (!savedMessage) {
+    if (savedMessages.length === 0) {
         alert('暂无留言可导出！');
         return;
     }
 
+    // 格式化留言内容为易读的文本格式
+    let exportContent = '留言导出\n\n';
+    savedMessages.forEach((msg, index) => {
+        exportContent += `留言 ${index + 1}:\n`;
+        exportContent += `用户名: ${msg.username}\n`;
+        exportContent += `内容: ${msg.content}\n`;
+        exportContent += `时间: ${msg.timestamp}\n\n`;
+    });
+
     // 创建 Blob 对象（文本格式）
-    const blob = new Blob([savedMessage], { type: 'text/plain' });
+    const blob = new Blob([exportContent], { type: 'text/plain' });
     
     // 生成临时下载链接
     const url = URL.createObjectURL(blob);
