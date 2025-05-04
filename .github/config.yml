@@ -1,0 +1,7 @@
+# 设置英文为默认 README
+repository:
+  name: your-repo-name
+  description: "Your repo description"
+  homepage: ""
+  default_branch: main
+  include_default_readme: false
