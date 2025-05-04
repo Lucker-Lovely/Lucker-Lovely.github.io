@@ -2,21 +2,47 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>项目导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://lucker-lovely.github.io/css/index.css">
 </head>
 <body>
     <div class="container">
         <h1>欢迎使用！</h1>
         
-        <!-- 绘画板跳转 -->
-        <a href="https://lucker-lovely.github.io/html/draw.html" class="btn">进入在线绘画板</a>
-
-        <!-- 留言板跳转（附带警告提示） -->
+        <div class="feature-intro">
+            <div class="feature">
+                <h3><i class="fas fa-paint-brush"></i> 在线绘画板</h3>
+                <p>使用简单易用的工具进行创作，随时保存您的作品。</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-comment"></i> 在线留言板</h3>
+                <p>与其他用户交流想法，分享您的见解和反馈。</p>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <a href="https://lucker-lovely.github.io/html/draw.html" class="btn">
+                <i class="fas fa-paint-brush"></i> 进入在线绘画板
+            </a>
+            <a href="https://lucker-lovely.github.io/html/note.html" class="btn">
+                <i class="fas fa-comment"></i> 进入在线留言板
+            </a>
+        </div>
+        
         <div class="warning-box">
-            <a href="https://lucker-lovely.github.io/html/note.html" class="btn">进入在线留言板</a>
-            <p class="warning-text">⚠️ 注意：留言板数据保存在当前浏览器本地，更换浏览器或设备将丢失数据！</p>
+            <span class="warning-icon">⚠️</span>
+            <p class="warning-text">注意：留言板数据保存在当前浏览器本地，更换浏览器或设备将丢失数据！</p>
+        </div>
+        
+        <div class="feedback-section">
+            <h3><i class="fas fa-comment-dots"></i> 有建议或问题？</h3>
+            <textarea id="feedbackInput" placeholder="请输入您的反馈..."></textarea>
+            <button id="submitFeedback">提交反馈</button>
         </div>
     </div>
+    
+    <script src="https://lucker-lovely.github.io/js/index.js"></script>
 </body>
 </html>
