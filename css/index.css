@@ -1,0 +1,14 @@
+body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to top right,#ff6e7f, #bfe9ff);
+            font-family: Arial, sans-serif;
+        }
+
+.warning-text{
+    color:red;
+}
